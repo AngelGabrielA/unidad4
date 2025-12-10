@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Ejercicio8 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int[] arr = {5, 12, 7, 9, 1, 20, 15};
+
+        System.out.print("Ingresa número a buscar: ");
+        int n = sc.nextInt();
+
+        boolean encontrado = false;
+
+        int i = 0;
+        while (i < arr.length) {
+            if (arr[i] == n) {
+                System.out.println("Encontrado en índice: " + i);
+                encontrado = true;
+                break;
+            }
+            i++;
+        }
+
+        if (!encontrado)
+            System.out.println("No se encontró el número.");
+    }
+}
