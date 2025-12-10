@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+    public static String clasificarCalificacion(int cal) {
+
+        if (cal >= 90 && cal <= 100) return "Sobresaliente";
+        if (cal >= 80) return "Notable";
+        if (cal >= 70) return "Aprobatorio";
+        return "Reprobatorio";
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa calificación: ");
+        int cal = sc.nextInt();
+
+        System.out.println(clasificarCalificacion(cal));
+    }
+}
