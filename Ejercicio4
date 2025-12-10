@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ejercicio4 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Ingresa valor: ");
+        double val = sc.nextDouble();
+
+        System.out.println("1. Km a millas");
+        System.out.println("2. Centígrados a Fahrenheit");
+        System.out.println("3. Metros a pies");
+        int opc = sc.nextInt();
+
+        switch (opc) {
+            case 1:
+                System.out.println("Resultado: " + (val * 0.621371));
+                break;
+            case 2:
+                System.out.println("Resultado: " + (val * 9.0 / 5.0 + 32));
+                break;
+            case 3:
+                System.out.println("Resultado: " + (val * 3.28084));
+                break;
+            default:
+                System.out.println("Opción inválida");
+        }
+    }
+}
