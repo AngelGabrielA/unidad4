@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Ejercicio2 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String password = "ingenieria2025";
+
+        int intentos = 0;
+        boolean ok = false;
+
+        while (intentos < 3) {
+            System.out.print("Introduce la contraseña: ");
+            String intento = sc.nextLine();
+
+            if (intento.equals(password)) {
+                System.out.println("Acceso concedido");
+                ok = true;
+                break;
+            }
+
+            System.out.println("Contraseña incorrecta");
+            intentos++;
+        }
+
+        if (!ok) {
+            System.out.println("Acceso denegado. Contacte a soporte.");
+        }
+    }
+}
