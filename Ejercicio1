@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Ejercicio1 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Elige una opción:");
+        System.out.println("1. Área de círculo");
+        System.out.println("2. Área de rectángulo");
+        int opc = sc.nextInt();
+
+        double area = 0;
+
+        if (opc == 1) {
+            System.out.print("Ingresa radio: ");
+            double r = sc.nextDouble();
+            area = Math.PI * r * r;
+
+        } else if (opc == 2) {
+            System.out.print("Ingresa base: ");
+            double b = sc.nextDouble();
+            System.out.print("Ingresa altura: ");
+            double h = sc.nextDouble();
+            area = b * h;
+
+        } else {
+            System.out.println("Opción inválida");
+            return;
+        }
+
+        System.out.println("Área calculada: " + area);
+
+        if (area > 100)
+            System.out.println("El área es mayor que 100.");
+        else
+            System.out.println("El área es menor o igual a 100.");
+    }
+}
