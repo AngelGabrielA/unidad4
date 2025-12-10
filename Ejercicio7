@@ -1,0 +1,15 @@
+public class Ejercicio7 {
+    public static void main(String[] args) {
+
+        char[] arr = {'a','x','e','p','u','o','i','b','t','a'};
+        int cont = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            char c = arr[i];
+            if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u')
+                cont++;
+        }
+
+        System.out.println("Vocales: " + cont);
+    }
+}
